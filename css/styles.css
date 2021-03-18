@@ -1,0 +1,180 @@
+:root {
+  --main-text-color: #757575;
+  --dark-bg-text-color: #ffffff;
+  --light-bg-text-color: #000000;
+  --accent-color: #2196f3;
+  --button-accent-color: #188ce8;
+  --title-color: #212121;
+  --dark-bg-color: #2f303a;
+  --light-bg-color: #e5e5e5;
+  --button-filter-bg-color: #F5F4FA;
+  --logo-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+address {
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.link,
+.webstudio {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-accent-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--dark-bg-text-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.webstudio {
+  font-family: var(--logo-font);
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--light-bg-text-color);
+}
+.web {
+  color: var(--accent-color);
+}
+
+.nav-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+nav .nav-link {
+  color: var(--title-color);
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dark-bg-text-color);
+}
+.dark-bg {
+  background-color: var(--dark-bg-color);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.advantage-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.team {
+  background-color: var(--light-bg-color);
+}
+
+.team-member {
+  font-size: 16px;
+  line-height: 1.186;
+  text-align: center;
+}
+
+.team-member-name {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--title-color);
+}
+
+.studio {
+  color: var(--dark-bg-text-color);
+}
+
+.address {
+  color: var(--dark-bg-text-color);
+}
+
+.contact {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/*Стили для страницы Портфолио*/
+
+.button-filter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  color: var(--title-color);
+  cursor: pointer;
+  background-color: var( --button-filter-bg-color);
+}
+
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--accent-color);
+  color: var( --dark-bg-text-color);
+}
+
+ .card-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
+ .card-type {
+  font-size: 16px;
+  line-height: 1.875;
+  color: var(--main-text-color);
+}
