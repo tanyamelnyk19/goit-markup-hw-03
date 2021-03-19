@@ -11,12 +11,39 @@
   --logo-font: 'Raleway', sans-serif;
 }
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
@@ -45,26 +72,30 @@ address {
   color: var(--accent-color);
 }
 
-.button:hover,
-.button:focus {
-  background-color: var(--button-accent-color);
-}
-
 .list {
   list-style: none;
+  padding-left: 0;
+	margin: 0;
 }
 
 .button {
+  display: inline-block;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--dark-bg-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  border: 0;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-accent-color);
 }
 
 .webstudio {
@@ -87,6 +118,10 @@ nav .nav-link {
   color: var(--title-color);
 }
 
+.hero {
+ text-align: center;
+}
+
 .page-title {
   font-weight: 900;
   font-size: 44px;
@@ -95,6 +130,7 @@ nav .nav-link {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
+  margin-bottom: 30px;
 }
 .dark-bg {
   background-color: var(--dark-bg-color);
@@ -106,6 +142,7 @@ nav .nav-link {
   line-height: 1.167;
   text-align: center;
   color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .advantage-title {
@@ -114,21 +151,26 @@ nav .nav-link {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 .team {
   background-color: var(--light-bg-color);
+  padding: 94px 215px;
 }
 
 .team-member {
   font-size: 16px;
   line-height: 1.186;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .team-member-name {
   font-weight: 500;
   font-size: 16px;
   color: var(--title-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .studio {
