@@ -7,18 +7,20 @@
   --title-color: #212121;
   --dark-bg-color: #2f303a;
   --light-bg-color: #e5e5e5;
-  --button-filter-bg-color: #F5F4FA;
+  --button-filter-bg-color: #f5f4fa;
   --logo-font: 'Raleway', sans-serif;
+  --border-color: #ececec;
+  --grid-item: 1;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -36,7 +38,7 @@ h4,
 h5,
 h6,
 p {
-	margin-top: 0;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -75,11 +77,36 @@ address {
 .list {
   list-style: none;
   padding-left: 0;
-	margin: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.grid-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
 }
 
 .button {
   display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  border: 0;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -87,15 +114,20 @@ address {
   color: var(--dark-bg-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
-  border-radius: 4px;
-  padding: 10px 32px;
-  min-width: 200px;
-  border: 0;
 }
 
 .button:hover,
 .button:focus {
   background-color: var(--button-accent-color);
+}
+
+header .container {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
 .webstudio {
@@ -108,7 +140,24 @@ address {
   color: var(--accent-color);
 }
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -118,59 +167,95 @@ nav .nav-link {
   color: var(--title-color);
 }
 
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .hero {
- text-align: center;
+  text-align: center;
+  padding: 200px 452px;
+}
+
+.hero-content {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-title {
+  margin-bottom: 30px;
+  text-align: center;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
-  margin-bottom: 30px;
 }
+
 .dark-bg {
   background-color: var(--dark-bg-color);
 }
 
 .section-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
   color: var(--title-color);
-  margin-bottom: 50px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantage-item {
+  --grid-item: 4;
 }
 
 .advantage-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
-  margin-bottom: 10px;
 }
+
+.work-item {
+  --grid-item: 3;
+}
+
 .team {
   background-color: var(--light-bg-color);
-  padding: 94px 215px;
 }
 
 .team-member {
+  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.186;
   text-align: center;
-  padding-bottom: 30px;
+  --grid-item: 4;
+  background-color: var(--dark-bg-text-color);
 }
 
-.team-member-name {
+.team-member .name {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   color: var(--title-color);
-  margin-top: 30px;
-  margin-bottom: 10px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .studio {
@@ -178,15 +263,19 @@ nav .nav-link {
 }
 
 .address {
+  margin-top: 20px;
+}
+
+.map-link {
   color: var(--dark-bg-text-color);
 }
 
-.contact {
-  color: rgba(255, 255, 255, 0.6);
+.contact-item {
+  margin-top: 9px;
 }
 
-.site-nav .link.current {
-  color: var(--accent-color);
+.contact-link {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /*Стили для страницы Портфолио*/
@@ -198,16 +287,16 @@ nav .nav-link {
   text-align: center;
   color: var(--title-color);
   cursor: pointer;
-  background-color: var( --button-filter-bg-color);
+  background-color: var(--button-filter-bg-color);
 }
 
 .button-filter:hover,
 .button-filter:focus {
   background-color: var(--accent-color);
-  color: var( --dark-bg-text-color);
+  color: var(--dark-bg-text-color);
 }
 
- .card-name {
+.card-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -215,7 +304,7 @@ nav .nav-link {
   color: var(--title-color);
 }
 
- .card-type {
+.card-type {
   font-size: 16px;
   line-height: 1.875;
   color: var(--main-text-color);
