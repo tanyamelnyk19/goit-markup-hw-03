@@ -8,6 +8,7 @@
   --dark-bg-color: #2f303a;
   --light-bg-color: #e5e5e5;
   --button-filter-bg-color: #f5f4fa;
+  --team-bg-color: #f5f4fa;
   --logo-font: 'Raleway', sans-serif;
   --border-color: #ececec;
   --card-border-color: #eeeeee;
@@ -121,7 +122,7 @@ address {
   background-color: var(--button-accent-color);
 }
 
-header .container {
+.header {
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -178,7 +179,7 @@ nav .nav-link {
 
 .hero {
   text-align: center;
-  padding: 200px 452px;
+  padding: 200px 0;
 }
 
 .hero-content {
@@ -237,7 +238,7 @@ nav .nav-link {
 }
 
 .team {
-  background-color: var(--light-bg-color);
+  background-color: var(--team-bg-color);
 }
 
 .team-member {
